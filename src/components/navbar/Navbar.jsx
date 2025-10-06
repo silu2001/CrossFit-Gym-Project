@@ -32,14 +32,14 @@ const Navbar = () => {
         <div className={`nav-links ${menuOpen ? "active" : ""}`}>
           {/* Gym Benefits Dropdown */}
           <div className="dropdown">
-            <NavLink to="/benefits" className="dropbtn" onClick={toggleDropdown}>
+            <NavLink to="/" className="dropbtn" onClick={toggleDropdown}>
               Gym Benefits ▾
             </NavLink>
 
             <div className={`dropdown-menu ${dropdownOpen ? "show" : ""}`}>
               <HashLink
                 smooth
-                to="/benefits#crossfit"
+                to="/#crossfit"
                 onClick={() => setDropdownOpen(false)}
               >
                 CrossFit Classes
@@ -47,7 +47,7 @@ const Navbar = () => {
 
               <HashLink
                 smooth
-                to="/benefits#strength"
+                to="/#strength"
                 onClick={() => setDropdownOpen(false)}
               >
                 Strength Training
@@ -55,7 +55,7 @@ const Navbar = () => {
 
               <HashLink
                 smooth
-                to="/benefits#personal"
+                to="/#personal"
                 onClick={() => setDropdownOpen(false)}
               >
                 Personal Training
@@ -63,7 +63,7 @@ const Navbar = () => {
 
               <HashLink
                 smooth
-                to="/benefits#member"
+                to="/#member"
                 onClick={() => setDropdownOpen(false)}
               >
                 Member Events

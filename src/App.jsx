@@ -18,7 +18,7 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path="/benefits" element={<GymBenefits />} />
+          <Route path="/" element={<GymBenefits />} />
           <Route path="/membership" element={<Membership />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
