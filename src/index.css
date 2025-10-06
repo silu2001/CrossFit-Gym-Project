@@ -1,0 +1,1253 @@
+/* --- Base Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar-container {
+    width: 100%;
+    background: transparent;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* --- Top bar --- */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    padding: 15px 100px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ccc;
+}
+
+/* --- Navbar --- */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 88px;
+    position: relative;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-section img {
+    width: 158px;
+    height: 88px;
+}
+
+.logo-section h2 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.logo-section span {
+    color: #ccc;
+}
+
+/* --- Nav Links --- */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #8fff60;
+}
+
+.free-trial-btn {
+    background: #7dfc43;
+    color: #111;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.free-trial-btn:hover {
+    background: #5cd129;
+}
+
+/* --- Menu Toggle for Mobile --- */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background: #f3f3f3;
+    min-width: 180px;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    z-index: 10;
+}
+
+.dropdown-menu a {
+    padding: 10px 15px;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+.dropdown-menu a:hover {
+    background: #e6e6e6;
+    color: #3d5939;
+}
+
+.dropdown-menu.show {
+    display: flex;
+}
+
+/*....hero section.....*/
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(180deg,
+            rgb(12 10 10 / 90%),
+            rgba(18, 18, 18, 0.8) 62%,
+            rgba(18, 18, 18, 0.64) 83%,
+            rgba(18, 18, 18, 0.12)), url("https://uploads-ssl.webflow.com/6255cb896cc97d5faf18caf7/625eda854730d9f5c66a73f1_CrossFit%20Gym%20class.jpg") no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    margin-top: -165px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.6); */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    padding: 0 20px;
+    margin-top: 120px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    color: #ddd;
+}
+
+.cta-btn {
+    background-color: #7dfc43;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #27ae60;
+}
+
+.review {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.95rem;
+    color: #fff;
+}
+
+.testimonial {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    font-size: 0.95rem;
+    color: #eee;
+}
+
+.profile-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #2ecc71;
+}
+
+.count {
+    background-color: #eee;
+    color: #111;
+    border-radius: 50%;
+}
+
+.stars {
+    font-size: 20px;
+
+}
+
+.services {
+    background-color: #0f0f0f;
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 60px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    justify-content: center;
+    padding: 10px 100px;
+}
+
+.service-card {
+    position: relative;
+    height: 280px;
+    border-radius: 16px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: scale(1.03);
+}
+
+.overlay1 {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(18, 18, 18, 0.6);
+    transition: background-color 0.3s ease;
+}
+
+.service-card:hover .overlay {
+    background-color: rgba(18, 18, 18, 0.3);
+}
+
+.service-card h3 {
+    position: relative;
+    z-index: 2;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.crossfit-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #111;
+    color: #fff;
+    min-height: 100vh;
+    padding: 40px 0;
+    gap: 48px;
+}
+
+.crossfit-content {
+    max-width: 495px;
+}
+
+.crossfit-badge {
+    display: inline-block;
+    background: #232323;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    margin-bottom: 28px;
+    letter-spacing: 0.5px;
+    border-color: red green blue yellow;
+    border-style: solid;
+    border-width: 2px;
+}
+
+.crossfit-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 32px;
+    line-height: 1.1;
+}
+
+.crossfit-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.crossfit-features li {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    gap: 12px;
+}
+
+.checkmark {
+    color: #67fb57;
+    font-size: 1.2em;
+}
+
+.crossfit-image img {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.strength-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #111;
+    color: #fff;
+    min-height: 100vh;
+    padding: 40px 0;
+    gap: 48px;
+}
+
+.strength-image img {
+    max-width: 480px;
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.strength-content {
+    max-width: 600px;
+}
+
+.strength-badge {
+    display: inline-block;
+    background: #232323;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    margin-bottom: 28px;
+    letter-spacing: 0.5px;
+    border-color: red green blue yellow;
+    border-style: solid;
+    border-width: 2px;
+}
+
+.strength-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 32px;
+    line-height: 1.1;
+}
+
+.strength-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.strength-features li {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    gap: 12px;
+}
+
+.checkmark {
+    color: #67fb57;
+    font-size: 1.2em;
+}
+
+.personal-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #111;
+    color: #fff;
+    min-height: 100vh;
+    padding: 40px 0;
+    gap: 48px;
+}
+
+.personal-content {
+    max-width: 540px;
+}
+
+.personal-badge {
+    display: inline-block;
+    background: #232323;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    margin-bottom: 28px;
+    letter-spacing: 0.5px;
+    border-color: red green blue yellow;
+    border-style: solid;
+    border-width: 2px;
+}
+
+.personal-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 32px;
+    line-height: 1.1;
+}
+
+.personal-note {
+    background: #222;
+    border-radius: 8px;
+    padding: 14px 20px;
+    font-size: 1rem;
+    margin-bottom: 38px;
+    color: #cacaca;
+    width: fit-content;
+}
+
+.personal-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.personal-features li {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    gap: 12px;
+}
+
+.checkmark {
+    color: #67fb57;
+    font-size: 1.2em;
+}
+
+.personal-image img {
+    max-width: 458px;
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.membership-section {
+    background-color: #657252;
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+    font-family: "Poppins", sans-serif;
+}
+
+.membership-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    font-weight: 600;
+    color: #fff;
+
+    justify-content: center;
+    display: flex;
+    padding: 10px 433px;
+}
+
+/* === Plan Cards === */
+.plans {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.plan-card {
+    background: #fff;
+    color: #000;
+    border-radius: 10px;
+    padding: 30px 20px;
+    width: 300px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.plan-card:hover {
+    transform: translateY(-5px);
+}
+
+.plan-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.price span {
+    font-size: 1rem;
+    color: #555;
+}
+
+.plan-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.plan-card ul li {
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.billing {
+    font-size: 0.85rem;
+    color: #777;
+    margin: 10px 0 15px;
+}
+
+button {
+    background: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #333;
+}
+
+/* === Testimonials === */
+.testimonials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    background: #5f7252;
+    border: 1px solid #c5c5c5;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 304px;
+    color: #fff;
+}
+
+.testimonial-card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 15px;
+}
+
+.member {
+    background-color: #5f7252;
+    border-color: red green blue yellow;
+    border-style: solid;
+    border-width: 2px;
+}
+
+/*..............*/
+.membership-section {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    font-family: "Poppins", sans-serif;
+}
+
+.about-btn {
+    background: transparent;
+    border: 1px solid #6ea16b;
+    border-radius: 30px;
+    padding: 8px 16px;
+    color: #c8eac4;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.about-btn:hover {
+    background-color: #6ea16b;
+    color: #111;
+}
+
+.intro h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.intro h1 span {
+    color: #c8eac4;
+}
+
+.intro p {
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto 50px;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+.trial-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+}
+
+.form-container {
+    background-color: #1a1a1a;
+    padding: 30px 40px;
+    border-radius: 15px;
+    width: 350px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.form-container h2 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-container input,
+.form-container select {
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #fff;
+    font-size: 14px;
+    color: #333;
+}
+
+.form-container button {
+    background-color: #7bd55c;
+    color: #111;
+    font-weight: 600;
+    border: none;
+    padding: 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-container button:hover {
+    background-color: #9cf27b;
+}
+
+.image-container img {
+    width: 333px;
+    border-radius: 10px;
+    object-fit: cover;
+    height: 420px;
+}
+
+.site-footer {
+    background-color: #111;
+    color: white;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-rendering: optimizeLegibility;
+}
+
+.footer-inner {
+    width: 100%;
+    max-width: 980px;
+    padding: 48px 24px;
+    margin: auto;
+    text-align: center;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 28px;
+}
+
+.logo-wrap {
+    width: 100%;
+    /* height: 56px; */
+
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1;
+}
+
+.brand-top {
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: 0.2px;
+}
+
+.brand-bottom {
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 0.2px;
+    margin-top: 2px;
+}
+
+.nav {
+    margin-top: 10px;
+}
+
+.nav-title {
+    font-size: 14px;
+    color: var(--muted);
+    letter-spacing: 1.6px;
+    margin: 10px 0 16px;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px 28px;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-list a {
+    color: var(--link);
+    text-decoration: none;
+    font-size: 16px;
+    transition: color .2s ease;
+}
+
+.nav-list a:hover,
+.nav-list a:focus {
+    color: #ffffff;
+}
+
+.legal {
+    margin-top: 22px;
+    font-size: 13px;
+    color: var(--muted);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.legal .divider {
+    opacity: .6
+}
+
+.credit {
+    color: var(--muted);
+    text-decoration: none;
+}
+
+.credit:hover {
+    color: #ffffff;
+}
+
+.made-in {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    font-size: 12px;
+    color: #111;
+    background: #ffffff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .25);
+}
+
+.cover{
+    width: 100%;
+    height: 35vh;
+    background-color:#111;
+    margin-top: -200px;
+}
+
+
+
+/* --- Responsive --- */
+@media (max-width: 800px) {
+    .top-bar {
+        font-size: 13px;
+        padding: 25px 20px;
+        margin-top: -15px;
+    }
+
+    .navbar {
+        padding: 12px 20px;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #111;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        padding: 20px;
+        gap: 18px;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .cta-btn {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+    }
+
+    .review,
+    .testimonial {
+        flex-direction: column;
+    }
+
+    .services h2 {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .service-card {
+        height: 240px;
+    }
+
+    .service-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .crossfit-section {
+
+        padding: 10px 20px;
+        gap: 30px;
+        min-height: 66vh;
+    }
+
+    .crossfit-image img {
+        max-width: 320px;
+    }
+
+    .crossfit-content h1 {
+        font-size: 2rem;
+    }
+
+    .crossfit-content {
+        max-width: 378px;
+    }
+
+    .strength-section {
+        flex-direction: row;
+        padding: 20px 20px;
+        gap: 36px;
+        min-height: 79vw;
+    }
+
+    .strength-image img {
+        max-width: 320px;
+    }
+
+    .strength-content h1 {
+        font-size: 2rem;
+    }
+
+    .strength-content {
+        max-width: 378px;
+    }
+
+    .personal-section {
+        padding: 30px 30px;
+        gap: 30px;
+        min-height: 74vh;
+    }
+
+    .personal-image img {
+        max-width: 320px;
+    }
+
+    .personal-content h1 {
+        font-size: 2rem;
+    }
+
+    .personal-content {
+        max-width: 378px;
+    }
+
+    .membership-title {
+        font-size: 1.7rem;
+        padding: 10px 160px;
+    }
+
+    /* .trial-section {
+        flex-direction: column;
+        gap: 30px;
+    } */
+
+    .form-container {
+        width: 70%;
+    }
+
+    .image-container img {
+        width: 100%;
+    }
+
+    .intro h1 {
+        font-size: 1.8rem;
+    }
+
+    .dropdown-menu {
+        position: static;
+        background: #f9f9f9;
+        box-shadow: none;
+        border-left: 3px solid #3d5939;
+        margin-left: 10px;
+    }
+
+    .dropdown-menu a {
+        padding: 8px 15px;
+    }
+
+
+}
+
+@media (max-width: 488px) {
+    .top-bar {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+    }
+
+    .logo-section h2 {
+        font-size: 18px;
+    }
+
+    .free-trial-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .hero {
+        height: 90vh;
+        padding: 0 10px;
+        margin-top: -200px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .cta-btn {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .testimonial {
+        font-size: 0.85rem;
+    }
+
+    .hero-content {
+        margin-top: 205px;
+    }
+
+    .services {
+        padding: 60px 15px;
+    }
+
+    .services h2 {
+        font-size: 1.7rem;
+        margin-bottom: 30px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 10px 33px;
+    }
+
+    .service-card {
+        height: 220px;
+    }
+
+    .service-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .crossfit-section {
+        padding: 18px 0;
+        gap: 22px;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .crossfit-content {
+        max-width: 95vw;
+    }
+
+    .crossfit-content h1 {
+        font-size: 1.3rem;
+    }
+
+    .crossfit-badge {
+        font-size: 0.95rem;
+        padding: 6px 14px;
+    }
+
+    .crossfit-image img {
+        max-width: 94vw;
+        border-radius: 12px;
+    }
+
+    .crossfit-features li {
+        font-size: 1rem;
+        margin-bottom: 14px;
+    }
+
+    .strength-section {
+        padding: 18px 0;
+        gap: 22px;
+        flex-direction: column-reverse;
+    }
+
+    .strength-content {
+        max-width: 95vw;
+    }
+
+    .strength-content h1 {
+        font-size: 1.3rem;
+    }
+
+    .strength-badge {
+        font-size: 0.95rem;
+        padding: 6px 14px;
+    }
+
+    .strength-image img {
+        max-width: 94vw;
+        border-radius: 12px;
+    }
+
+    .strength-features li {
+        font-size: 1rem;
+        margin-bottom: 14px;
+    }
+
+    .personal-section {
+        padding: 18px 0;
+        gap: 22px;
+        flex-direction: column;
+    }
+
+    .personal-content {
+        max-width: 95vw;
+    }
+
+    .personal-content h1 {
+        font-size: 1.3rem;
+    }
+
+    .personal-badge {
+        font-size: 0.95rem;
+        padding: 6px 14px;
+    }
+
+    .personal-note {
+        font-size: 0.95rem;
+        padding: 10px 12px;
+        margin-bottom: 18px;
+    }
+
+    .personal-image img {
+        max-width: 94vw;
+        border-radius: 12px;
+    }
+
+    .personal-features li {
+        font-size: 1rem;
+        margin-bottom: 14px;
+    }
+
+    .membership-section {
+        padding: 40px 10px;
+    }
+
+    .membership-title {
+        font-size: 1.4rem;
+        padding: 10px 27px;
+    }
+
+    .plan-card {
+        width: 100%;
+        padding: 20px 10px;
+    }
+
+    /* 
+    button {
+        width: 100%;
+    } */
+
+    .testimonial-card {
+        width: 100%;
+        text-align: center;
+    }
+
+    .intro h1 {
+        font-size: 1.4rem;
+    }
+
+    .intro p {
+        font-size: 0.9rem;
+    }
+
+    .form-container {
+        padding: 25px;
+    }
+
+    .form-container h2 {
+        text-align: center;
+    }
+
+    .form-container input,
+    .form-container select {
+        font-size: 13px;
+    }
+
+    .about-btn {
+        font-size: 12px;
+        padding: 6px 14px;
+    }
+
+    .trial-section {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .form-container {
+        width: 92%;
+    }
+
+
+
+}

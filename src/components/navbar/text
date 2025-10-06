@@ -1,0 +1,40 @@
+  const handleSelectChange = (e) => {
+    const value = e.target.value;
+    if (value) {
+      window.location.href = value; // navigate to /benefits#crossfit etc.
+      setMenuOpen(false); // close mobile menu if open
+    }
+  };
+
+  return (
+    <header className="navbar-container">
+      {/* Top Bar */}
+      <div className="top-bar">
+        <p>CrossFit Gym in Denver, Colorado</p>
+        <span>Jon: (123) 456 7890</span>
+      </div>
+
+      {/* Navbar */}
+      <nav className="navbar">
+        <div className="logo-section">
+          <img
+            src="https://uploads-ssl.webflow.com/6255cb896cc97d5faf18caf7/6255ed3eded8d1889d5dd8cf_crossfit%20gym%20logo.svg"
+            alt="logo"
+          />
+        </div>
+
+        {/* Nav Links */}
+        <div className={`nav-links ${menuOpen ? "active" : ""}`}>
+          {/* ✅ Gym Benefits Dropdown using select */}
+        
+          <div className="dropdown-select">
+            
+            <select onChange={handleSelectChange} defaultValue="">
+              
+              <option value="/benefits">Gym Benefits ▾</option>
+              <option value="/benefits#crossfit">CrossFit Classes</option>
+              <option value="/benefits#strength">Strength Training</option>
+              <option value="/benefits#personal">Personal Training</option>
+              <option value="/benefits#member">Member Events</option>
+            </select>
+          </div>
